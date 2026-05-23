@@ -1,0 +1,46 @@
+sequenceDiagram
+
+  actor A
+  participant B
+  participant C
+
+  %% Basic Message
+  A->>B: TEXT
+  B-->>A: TEXT
+
+  %% Self Message
+  B->>B: TEXT
+
+  %% Note
+  Note right of B: TEXT
+
+  %% Loop
+  loop TEXT
+      A->>B: TEXT
+  end
+
+  %% Optional Flow
+  opt TEXT
+      B->>C: TEXT
+  end
+
+  %% Alternative Flow
+  alt TEXT
+      B->>C: TEXT
+      C-->>B: TEXT
+  else TEXT
+      B-->>A: TEXT
+  end
+
+  %% Parallel Actions
+  par TEXT
+      B->>C: TEXT
+  and TEXT
+      B->>B: TEXT
+  end
+
+  %% Activation
+  activate B
+  B->>C: TEXT
+  C-->>B: TEXT
+  deactivate B

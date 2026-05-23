@@ -1,8 +1,12 @@
 # Markdown Syntax Notes
 
-## Paragraph
+## Comments
 
----
+markdown supports html comments
+
+<!-- -->
+
+## Paragraph
 
 This is a paragraph
 
@@ -143,6 +147,7 @@ $$ \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,. $$
 3 underscore/star/dash
 ___
 ***
+___
 
 ## Footnotes
 
