@@ -6,7 +6,7 @@ A list of tutorials
 
 - [x] 1. Markdown
 - [ ] 2. UML
-- [ ] 3. Mermaid
+- [x] 3. Mermaid
 - [ ] 4. Git
 - [ ] 5. CMD
 - [ ] 6. PowerShell

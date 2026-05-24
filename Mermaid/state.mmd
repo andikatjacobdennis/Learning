@@ -1,0 +1,32 @@
+stateDiagram-v2
+    [*] --> OrderPlaced
+
+    state OrderPlaced {
+        [*] --> ValidateOrder
+        ValidateOrder --> PaymentPending
+    }
+
+    PaymentPending --> PaymentChoice
+
+    state PaymentChoice <<choice>>
+
+    note left of PaymentChoice
+        Important Note
+    end note
+
+    PaymentChoice --> PaymentSuccess : Payment Approved
+    PaymentChoice --> PaymentFailed : Payment Rejected
+
+    state PaymentSuccess {
+        [*] --> PackItems
+        PackItems --> ShipOrder
+        ShipOrder --> Delivered
+    }
+
+    state PaymentFailed {
+        [*] --> NotifyUser
+        NotifyUser --> RetryPayment
+    }
+
+    RetryPayment --> PaymentPending
+    Delivered --> [*]
