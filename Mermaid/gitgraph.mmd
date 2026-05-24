@@ -1,0 +1,13 @@
+gitGraph TB:
+ commit id:"A" tag:"v0.1"
+ branch dev
+ checkout dev
+ commit type:HIGHLIGHT id:"B"
+ branch feat
+ checkout feat
+ commit type:REVERSE id:"C"
+ checkout dev
+ merge feat
+ cherry-pick id:"C"
+ checkout main
+ merge dev tag:"v1.0"
